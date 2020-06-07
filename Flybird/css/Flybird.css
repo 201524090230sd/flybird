@@ -1,0 +1,193 @@
+.canvas{
+	position: relative;
+	margin:0 auto;
+	width:360px;
+	height: 480px;
+	background: url(../images/bg.jpg);
+	overflow: hidden;
+}
+.game_start{
+	display: block;
+}
+.head{
+	display: block;
+	position: relative;
+	left: 70px;
+	top: 100px;
+	width:230px;
+	height:80px;
+	background: url(../images/head.jpg);
+	animation: headmove 1.5s infinite;
+}
+@keyframes headmove{
+	0%{top: 100px;}
+	50%{top: 80px;}
+	100%{top: 100px;}
+}
+.bird_small{
+	position: absolute;
+	right: 5px;
+	top: 20px;
+	width: 40px;
+	height: 30px;
+	animation: birdmove 1s infinite;	
+}
+@keyframes birdmove{
+	0%{background: url(../images/bird0.png) no-repeat;}
+	100%{background:url(../images/bird1.png) no-repeat;}
+}
+#flybird{
+    display: none;
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	left:90px;
+	top: 150px;
+    background: url(../images/bird0.png) no-repeat;
+
+}
+.birddown{
+	transition: all 0.5s linear;
+}
+#flybird_down{
+	position: absolute;
+	top: 150px;
+	left: 90px;
+	width: 40px;
+	height: 30px;
+	animation: flybird_down 1.5s infinite;
+}
+#flybird_up{
+	position: absolute;
+	top: 150px;
+	left: 90px;
+	width: 40px;
+	height: 30px;
+	animation: flybird_up 1.5s infinite;
+}
+@keyframes flybird_down{
+	0%{background: url(../images/down_bird0.png);}
+	100%{background: url(../images/down_bird1.png);}
+}
+@keyframes flybird_up{
+	0%{background: url(../images/up_bird0.png);}
+	100%{background: url(../images/up_bird1.png);}
+}
+.btns{
+	display: block;
+	position: absolute;
+	width: 220px;
+	height: 50px;
+	left: 70px;
+	top: 250px;
+}
+.start_btn{
+	width: 80px;
+	height: 30px;
+	background: url(../images/start.jpg);
+}
+.submit{
+	width: 80px;
+	height: 30px;
+	position: relative;
+	left: 20px;
+	background: url(../images/submit.jpg);
+}
+.slider{
+	position: absolute;
+	width: 720px;
+	height: auto;
+	left: 0px;
+	top: 420px;
+	animation: myslider 3s infinite linear;
+}
+.slider img{
+    display:inline-block;
+}
+@keyframes myslider{
+	0%{left:0;}
+	100%{left: -360px;}
+}
+.conduit_group{
+    display: block;
+	width: 100%;
+	height: auto;
+	position: absolute;
+}
+.conduitItem{
+	width: 60px;
+	height: 420px;
+	position: absolute;
+	top: 0;
+
+}
+.top_conduit{
+	position: absolute;
+	width: 100%;
+    top: 0;
+    background:url(../images/up_mod.png);
+
+}
+.top_conduit div{
+  background:url(../images/up_pipe.png) 0 bottom no-repeat;
+}
+.bottom_conduit{
+	position: absolute;
+	width: 100%;
+    bottom: 0;
+    background:url(../images/down_mod.png);
+
+}
+.bottom_conduit div{
+	background:url(../images/down_pipe.png) 0 top no-repeat;
+}
+.scoring{
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	text-align: center;
+}
+.gameover{
+	display: none;
+	z-index: 100;
+}
+.gameover .overimg{
+	position: absolute;
+	width: 270px;
+	height: 150px;
+	top: 100px;
+	left: 70px;
+	background:url(../images/game_over.jpg) no-repeat;
+
+}
+.gameover .overmessage{
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	top: 170px;
+	left: 40px;
+	background:url(../images/message.jpg) no-repeat;
+}
+.gameover .overmessage .thisscore{
+	font-size: 30px;
+	position: absolute;
+	top: 30px;
+	left: 210px;
+	color: red;
+
+}
+.gameover .overmessage .historyscore{
+	font-size: 30px;
+	position: absolute;
+	top: 87px;
+	left: 215px;
+
+}
+.gameover .ok{
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	bottom: 100px;
+	left: 120px;
+	background:url(../images/ok.jpg) no-repeat;
+}
